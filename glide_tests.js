@@ -20,7 +20,7 @@ while (gr.next()) {
 /////////////
 
 while (gr.next()) {
-  gr.setValue('state', 3);
+  gr.setValue('state', 3); 
 
   var oldDescription = gr.getValue('short_description');
   var newDescription = 'ON HOLD: ' + oldDescription;
