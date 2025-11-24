@@ -1,3 +1,17 @@
+///////////////////////////
+var gr = new GlideRecord('incident');
+
+gr.addQuery('active', true);
+gr.addQuery('assigned_to.user_name', 'beth.anglin');
+gr.addQuery('category', 'Hardware');
+gr.query();
+
+while(gr.next()){
+    gs.log(gr.getValue('number'));
+}
+
+/////////////////////////////
+
 var gr = new GlideRecord('incident');
 
 gr.addQuery('active', true);
@@ -30,3 +44,5 @@ while (gr.next()) {
   gr.update();
   gs.log(gr.getValue('number'));
 }
+
+
